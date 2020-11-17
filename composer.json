@@ -1,0 +1,43 @@
+{
+    "name": "tatter/php-reddit",
+    "type": "project",
+    "description": "CodeIgniter4 Reddit",
+    "homepage": "https://tattersoftware.com",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0",
+        "laminas/laminas-escaper": "dev-issue-8 as 2.7.0",
+        "codeigniter4/codeigniter4": "4.1.x-dev"
+    },
+    "require-dev": {
+		"codeigniter4/codeigniter4-standard": "^1.0",
+		"fakerphp/faker": "^1.9",
+		"mikey179/vfsstream": "^1.6",
+		"phpstan/phpstan": "^0.12",
+        "phpunit/phpunit": "^9.0",
+		"squizlabs/php_codesniffer": "^3.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Support\\": "tests/_support"
+        }
+    },
+    "scripts": {
+		"analyze": "phpstan analyze",
+		"style": "phpcbf --standard=./vendor/codeigniter4/codeigniter4-standard/CodeIgniter4 tests/ app/",
+		"test": "phpunit"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/codeigniter4/codeigniter4"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Gounlaf/laminas-escaper"
+        }
+        
+    ]
+}
